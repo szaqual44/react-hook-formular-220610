@@ -1,13 +1,8 @@
 import { TextField } from '@mui/material'
-import { Controller, useForm } from 'react-hook-form'
+import { Controller } from 'react-hook-form'
+import { ExtendProps } from '../interfaces/interfaces'; 
 
-export interface MyProps {
-    label: string
-    required?: boolean
-    name:string
-  }
-
-export function InputForm({label,required, name}: MyProps) {
+export function InputForm({label,required,name}: ExtendProps, ) {
     return (
     <>   
         <Controller
@@ -20,3 +15,6 @@ export function InputForm({label,required, name}: MyProps) {
     </>
   )
 }
+
+
+//nie uzywac label={label}

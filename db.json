@@ -1,0 +1,25 @@
+
+{
+    "mydata": [
+      {
+        "id": 1,
+        "name": "Joshua Bloch",
+        "login": "Effective Java, 2nd Edition"
+      },
+      {
+        "id": 2,
+        "name": "Gavin King",
+        "login": "Java Persistence With Hibernate"
+      },
+      {
+        "id": 3,
+        "name": "Douglas Crockford",
+        "login": "JavaScript: The Good Parts"
+      },
+      {
+        "id": 4,
+        "name": "Kent Beck",
+        "login": "Test Driven Development"
+      }
+    ]
+  }

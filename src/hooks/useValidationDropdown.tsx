@@ -1,23 +1,26 @@
-import { useEffect, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useEffect} from "react";
+import { useFormContext } from "react-hook-form";
 
 export interface MyProps {  
  
   }
 
 export const useValidationDropdown = () => {
-    const {watch, setError} = useForm()
-    const [err,setErr] = useState('')
+    const {watch, setError} = useFormContext()
+    watch('dropdown')
     const dropdown = watch("dropdown")
     const name = watch("name")
-  
+    console.log('dropdown ',dropdown)
+    console.log('name ',name)
+    console.log('sdsdsdds')
     
     useEffect(()=>{   
-        console.log(dropdown)      
-            if (dropdown === 'Lemon') setErr('Nie spełnione kryteria')
-            setErr('')  
-      },[dropdown])
+                     
+            if (1) setError('customError',{type:'custom', message: 'Nie spełnione kryteria'})
+            else setError('customError',{type:'custom', message: ''})
+      },[])
+    //   console.log(errors) 
 
-     return err
+     return 
 }
 
